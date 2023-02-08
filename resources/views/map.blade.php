@@ -74,13 +74,13 @@
                     iconUrl = 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png';
                     color = 'red'
                 }
-                if (item.type >= 2 || item.type <= 6) {
+                if (item.type >= 2 || item.type <= 7) {
                     iconUrl =
                         'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png';
                     color = 'yellow'
                 }
-                if (item.type == 7 || item.type == 8) {
-                    if (item.active) {
+                if (item.type == 8 || item.type == 9) {
+                    if (item.medical_point_status == 1 || item.medical_point_status == 2) {
                         iconUrl =
                             'https://cdn.iconscout.com/icon/premium/png-512-thumb/first-aids-bag-2299218-1920340.png?f=avif&w=512';
                     } else {
@@ -96,12 +96,6 @@
                 });
                 var marker1 = L.marker([item.lat, item.long], {
                     icon: greenIcon
-                }).addTo(map);
-                L.circle([item.lat, item.long], {
-                    color: color,
-                    fillColor: color,
-                    fillOpacity: 0.7,
-                    radius: 1000
                 }).addTo(map);
 
                 let titles = {
