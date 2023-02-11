@@ -132,6 +132,8 @@
             <hr>
             <h5 class='rtl'>الوصف: ${item.description || 'لا يوجد معلومات'}</h5>
             <hr>
+            <h5 class='rtl'>وسيلة التواصل: ${item.phone || 'لا يوجد معلومات'}</h5>
+            <hr>
             <h5 class='rtl'>معلومات اضافية: ${item.more_info || 'لا يوجد معلومات'}</h5>
             <hr>
         </div>
